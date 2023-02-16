@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>DataChef</title>
+  <meta content="" name="description">
+
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Knight - v4.3.0
+  * Template URL: https://bootstrapmade.com/knight-free-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+	<form action="{% url 'tsfile' %}" method="post"  enctype="multipart/form-data" class="my-5">
+      {% csrf_token %}
+    <div class="hero-container">
+      <a href="index.html" class="hero-logo" data-aos="zoom-in"><img src="{% static 'assets/img/prop.png' %}" alt=""></a>
+
+      <h1 data-aos="zoom-in">DataChef for Time Series !</h1>
+
+        <h2 data-aos="fade-up">Get AI ready datasets instantly for #Free </h2>
+	  <div class="col-md-6 form-group">
+        <input type="file" name="ts" class="form-control" placeholder="Provide the file path to be processed !" required>
+      </div>
+	  <input type="submit" value="Upload" data-aos="fade-up" data-aos-delay="200" class="btn-get-started scrollto">
+	</div>
+	</form>
+  </section><!-- End Hero -->
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <a href="{% url 'index'%}"><img src="{% static 'assets/img/logo.png' %}" alt="" class="img-fluid"></a>
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About US</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+		  <li><a class="nav-link scrollto" href="#faq">FAQs</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact Us</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>About</h2>
+          <p>A service for all free of cost</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="image">
+              <img src="{% static 'assets/img/about.jpg' %}" class="img-fluid" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="content pt-4 pt-lg-0 pl-0 pl-lg-3 ">
+              <h3>Download Youtube videos in mp4 & mp3 formats for #Free</h3>
+              <p class="fst-italic">
+                I go on Youtube just to watch a music video and 5 hours later, end up watching a video on how to talk to Giraffe.
+              </p>
+              <ul>
+                <li><i class="bx bx-check-double"></i> To destruct the undetermined Youtube recommendation algorithm.</li>
+                <li><i class="bx bx-check-double"></i> For avoiding startup and in btw annoying commercial Ads.</li>
+                <li><i class="bx bx-check-double"></i> To avoid paying for premium leisures and enjoy your favourites from any part of world without accessing web.</li>
+              </ul>
+              <p>
+
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials">
+      <div class="container" data-aos="zoom-in">
+        <div class="quote-icon">
+          <i class="bx bxs-quote-right"></i>
+        </div>
+
+        <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  “Perfection is achieved not when there is nothing more to add, but rather when there is nothing more to take away.”
+				   "One of the huge mistakes people make is that they try to force an interest on themselves. You don't choose your passions; your passions choose you."
+                </p>
+                <img src="{% static 'assets/img/testimonials/testimonials1.jpg' %}" class="testimonial-img" alt="">
+                <h3>Umair Nizam</h3>
+                <h4>Ceo &amp; Founder</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  According to me education is not a business but a blissful blessing which is given by one to another. So here we tried to connect you with our free courses website.
+                </p>
+                <img src="{% static 'assets/img/testimonials/testimonials2.jpg' %}" class="testimonial-img" alt="">
+                <h3><a href="https://templeoflearningacademy.wordpress.com/">Temple Of Learning</a></h3>
+                <h4>Education is free if you are dedicated.</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  THERE IS A SPECIAL OFFER ON OUR WEBSITE FOR ALL OF YOU GUYS WHO LOOK HACKING AS THEIR CAREER & DREAMT TO BE A ETHICAL HACKER, PENETRATION TESTER OR CYBERSECURITY.WE WILL GUIDE YOU THROUGHOUT YOUR CAREER AND POLISH YOU IN SUCH A WAY SO YOU ACHIEVE YOUR DREAM JOB!!!.
+                </p>
+                <img src="{% static 'assets/img/testimonials/testimonials3.jpg' %}" class="testimonial-img" alt="">
+                <h3><a href="https://spydershacks.square.site/">SpyderWeb</a></h3>
+                <h4>We teach best hacking tactics for free.</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  ‘A MAN WHO READS TOO MUCH AND USES HIS OWN BRAIN TOO LITTLE FALLS INTO LAZY HABITS OF THINKING.’
+                </p>
+                <img src="{% static 'assets/img/testimonials/testimonials4.jpg' %}" class="testimonial-img" alt="">
+                <h3><a href="https://digitallibrary801845373.wordpress.com/">Digital Library</a></h3>
+                <h4>EDUCATION IS THE KINDLING OF A FLAME, NOT THE FILLING OF A VESSEL.</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+           <!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Team</h2>
+          <p>"You might not think that programmers are artists, but programming is an extremely creative profession. It's logic-based creativity."</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="zoom-in">
+              <div class="member-img">
+                <img src="{% static 'assets/img/team/team-1.jpg' %}" class="img-fluid" alt="">
+                <div class="social">
+                  <a href="https://twitter.com/INVENTIONheIp"><i class="bi bi-twitter"></i></a>
+                  <a href="https://www.facebook.com/profile.php?id=100069787142999"><i class="bi bi-facebook"></i></a>
+                  <a href="https://dribbble.com/INVENTION"><i class="bi bi-instagram"></i></a>
+                  <a href="https://www.pinterest.com/inventionhelpdesk/"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Umair Nizam</h4>
+                <span>Chief Executive Officer</span>
+                <p>“People always fear change.  People feared electricity when it was invented, didn’t they?  People feared coal, they feared gas-powered engines.  There will always be ignorance, and ignorance leads to fear.  But with time, people will come to accept their silicon masters.”</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="zoom-in" data-aos-delay="100">
+              <div class="member-img">
+                <img src="{% static 'assets/img/team/team-2.jpg' %}" class="img-fluid" alt="">
+                <div class="social">
+                  <a href="https://twitter.com/INVENTIONheIp"><i class="bi bi-twitter"></i></a>
+                  <a href="https://www.facebook.com/profile.php?id=100069787142999"><i class="bi bi-facebook"></i></a>
+                  <a href="https://dribbble.com/INVENTION"><i class="bi bi-instagram"></i></a>
+                  <a href="https://www.pinterest.com/inventionhelpdesk/"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Sarah Jhonson</h4>
+                <span>Product Manager</span>
+                <p>“I’ve noticed lately that the paranoid fear of computers becoming intelligent and taking over the world has almost entirely disappeared from the common culture.  Near as I can tell, this coincides with the release of MS-DOS.”</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="zoom-in" data-aos-delay="200">
+              <div class="member-img">
+                <img src="{% static 'assets/img/team/team-3.jpg' %}" class="img-fluid" alt="">
+                <div class="social">
+                  <a href="https://twitter.com/INVENTIONheIp"><i class="bi bi-twitter"></i></a>
+                  <a href="https://www.facebook.com/profile.php?id=100069787142999"><i class="bi bi-facebook"></i></a>
+                  <a href="https://dribbble.com/INVENTION"><i class="bi bi-instagram"></i></a>
+                  <a href="https://www.pinterest.com/inventionhelpdesk/"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>William Anderson</h4>
+                <span>CTO</span>
+                <p>“If the automobile had followed the same development cycle as the computer, a Rolls-Royce would today cost $100, get a million miles per gallon, and explode once a year, killing everyone inside.”</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Team Section -->
+
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Frequently Asked Questions</h2>
+        </div>
+
+        <ul class="faq-list">
+
+          <li data-aos="fade-up">
+            <a data-bs-toggle="collapse" class="collapsed" data-bs-target="#faq1">Can we download youtube video in audio formats? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
+            <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+              <p>
+                Yes, you can download in video as well as audio formats also. Select the file type resolution and format whichever you like to start downloading.
+              </p>
+            </div>
+          </li>
+
+          <li data-aos="fade-up" data-aos-delay="100">
+            <a data-bs-toggle="collapse" data-bs-target="#faq2" class="collapsed">Is the videos available only for Youtube premium members also downloadable? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
+            <div id="faq2" class="collapse" data-bs-parent=".faq-list">
+              <p>
+                Yes, you can download any video of which link you have present whether its available only for Premium members or free member it doesn't matters in our service.
+              </p>
+            </div>
+          </li>
+
+          <li data-aos="fade-up" data-aos-delay="200">
+            <a data-bs-toggle="collapse" data-bs-target="#faq3" class="collapsed">What are the formats of video downloads available? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
+            <div id="faq3" class="collapse" data-bs-parent=".faq-list">
+              <p>
+                In video file type the formats available for download through our servers are video/mp4 & video/webm in these resolutions 144p, 240p, 360p, 480p, 720p, 1080p, 1440p, 2160p .
+              </p>
+            </div>
+          </li>
+
+          <li data-aos="fade-up" data-aos-delay="300">
+            <a data-bs-toggle="collapse" data-bs-target="#faq4" class="collapsed">What type of streams are available for downloading audio files? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
+            <div id="faq4" class="collapse" data-bs-parent=".faq-list">
+              <p>
+                In audio file types the strams available for download through our servers are audio/mp4 & audio/webm in the following streams 50kbps, 70kbps, 128kbps, 160kbps .
+              </p>
+            </div>
+          </li>
+
+
+        </ul>
+
+      </div>
+    </section><!-- End Frequently Asked Questions Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact Us</h2>
+          <p>Don’t hesitate to reach out with Us !!!</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4">
+            <div class="info d-flex flex-column justify-content-center" data-aos="fade-right">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>Somewhere On Earth<br>Milky way Galaxy</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>invention.helpdesk@gmail.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Whatsapp:</h4>
+                <p>+994408926190</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-8 mt-5 mt-lg-0">
+
+            <form action="" method="post" role="form" class="php-email-form" data-aos="fade-left">
+              {% csrf_token %}
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message">Your message has been sent. Thank you!</div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+
+      <div class="container">
+
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <a href="#header" class="scrollto footer-logo"><img src="{% static 'assets/img/hero-logo.png' %}" alt=""></a>
+            <h3>Knight</h3>
+            <h5>Stay In The Loop With Us !!!</h5>
+          </div>
+        </div>
+
+        <div class="row footer-newsletter justify-content-center">
+          <div class="col-lg-6">
+            <form action="{%url 'index'%}" method="post">
+              {% csrf_token %}
+              <input type="email" name="email" placeholder="Enter your Email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+        </div>
+
+        <div class="social-links">
+          <a href="https://twitter.com/INVENTIONheIp" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=100069787142999" class="facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="https://dribbble.com/INVENTION" class="instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="+994408926190" class="google-plus"><i class="bx bxl-skype"></i></a>
+          <a href="https://www.pinterest.com/inventionhelpdesk/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Knight</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/knight-free-bootstrap-theme/ -->
+        Designed by <a href="#team">Umair Nizam</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

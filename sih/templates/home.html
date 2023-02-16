@@ -1,0 +1,16 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>HTML Forms</h2>
+<h3>{{form}}</h3>
+
+<form action="{% url 'savefile' %}" method="post"  enctype="multipart/form-data" class="my-5">
+  {% csrf_token %}
+  <input type="file" name="file" />
+  <input type="submit" class="btn tn-primary">
+</form> 
+
+</body>
+</html>
